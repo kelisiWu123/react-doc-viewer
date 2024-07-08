@@ -1,0 +1,148 @@
+@import './dropdown.less';
+@import './panels.less';
+@import './position.less';
+@import './rtl.less';
+
+@tabs-prefix-cls: rc-tabs;
+@easing-in-out: cubic-bezier(0.35, 0, 0.25, 1);
+@effect-duration: 0.3s;
+@primary-color: #007a6b;
+.@{tabs-prefix-cls} {
+  font-size: 14px;
+  overflow: hidden;
+
+  // ========================== Navigation ==========================
+  &-nav {
+    display: flex;
+    flex: none;
+    position: relative;
+
+    &-measure,
+    &-wrap {
+      transform: translate(0);
+      position: relative;
+      flex: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      display: flex;
+
+      &-ping-left::before,
+      &-ping-right::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+
+      &-ping-left::before {
+        left: 0;
+        border-left: 1px solid #8d939d;
+      }
+
+      &-ping-right::after {
+        right: 0;
+        border-right: 1px solid #8d939d;
+      }
+
+      &-ping-top::before,
+      &-ping-bottom::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      &-ping-top::before {
+        top: 0;
+        border-top: 1px solid #8d939d;
+      }
+
+      &-ping-bottom::after {
+        bottom: 0;
+        border-top: 1px solid #8d939d;
+      }
+    }
+
+    &-list {
+      display: flex;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    // >>>>>>>> Operations
+    &-operations {
+      display: flex;
+
+      &-hidden {
+        position: absolute;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
+    &-more {
+      border: none;
+      background: white;
+      color: @primary-color;
+      white-space: nowrap;
+    }
+
+    &-add {
+      border: 1px solid green;
+      background: rgba(0, 255, 0, 10%);
+    }
+  }
+
+  &-tab {
+    border: 0;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 50%);
+    margin: 0;
+    display: flex;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    font-weight: lighter;
+    align-items: center;
+
+    &-btn,
+    &-remove {
+      border: 0;
+      background: transparent;
+    }
+
+    &-btn {
+      font-weight: inherit;
+      line-height: 32px;
+      font-size: 15px;
+      padding: 0 12px;
+    }
+
+    &-remove {
+      &:hover {
+        color: @primary-color;
+      }
+    }
+
+    &-active {
+      // padding-left: 30px;
+      font-weight: bold;
+      font-size: 15px;
+      color: @primary-color;
+    }
+  }
+
+  &-ink-bar {
+    position: absolute;
+    background: @primary-color;
+    pointer-events: none;
+
+    &-animated {
+      transition: all 0.3s;
+    }
+  }
+
+  &-extra-content {
+    flex: none;
+  }
+}

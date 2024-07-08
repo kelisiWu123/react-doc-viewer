@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "noEmit": true,
+    "allowJs": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@@/*": [".dumi/tmp/*"],
+      "react-doc-view": ["src"],
+      "react-doc-view/*": ["src/*", "*"]
+    }
+  },
+  "include": [".dumirc.ts", "src/**/*"],
+}
