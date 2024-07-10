@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { VideoViewer } from '../../src';
-import { fetchFile } from '../../src/z_utils';
+import { VideoViewer } from 'react-doc-view';
+import { fetchFile } from '@/z_utils';
 
 const Video = () => {
   const [example, setExample] = useState<Blob>();
   useEffect(() => {
-    fetchFile('/mp3file.mp3', setExample);
+    fetchFile('/flvFile.flv', setExample);
   }, []);
   return (
     <div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import FileViewer from '../../src/FileViewer';
+import FileViewer from '@/FileViewer';
 
 const File = () => {
   const [file, setFile] = React.useState<Blob>();

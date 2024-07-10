@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { XLSXViewer } from 'react-doc-view';
-import { fetchFile } from 'react-doc-view/z_utils';
+import { fetchFile } from '@/z_utils';
 
 const Xlsx = () => {
   const [example, setExample] = useState<Blob>();

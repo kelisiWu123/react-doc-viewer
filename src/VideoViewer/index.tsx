@@ -18,7 +18,7 @@ const FlvViewer: React.FC<FlvViewerPropsType> = ({
     if (file && ref.current) {
       const url = URL.createObjectURL(file);
       const flvPlayer = flv.createPlayer({
-        type: file.type,
+        type: 'flv',
         url: url,
       });
       // 保留地址
