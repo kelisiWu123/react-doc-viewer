@@ -5,7 +5,7 @@ import VideoViewer from "./VideoViewer";
 import CSVViewer from "./CSVViewer";
 import TxtViewer  from "./TxtViewer";
 import ImgViewer from './ImgViewer'
-import DemoWrapper from "react-doc-view/components/DemoWrapper";
+import DemoWrapper from "@/components/DemoWrapper";
 
 
 export  {XLSXViewer,DocxViewer,PDFViewer,VideoViewer,CSVViewer,TxtViewer,ImgViewer,DemoWrapper}
